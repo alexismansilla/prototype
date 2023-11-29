@@ -7,5 +7,7 @@ Rails.application.routes.draw do
     end
   end
 
+  get :show, to: 'prototype#show'
+
   root to: "prototype#index"
 end
