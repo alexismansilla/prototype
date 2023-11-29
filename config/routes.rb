@@ -6,4 +6,6 @@ Rails.application.routes.draw do
       resources :prototype, only: [:index]
     end
   end
+
+  root to: "prototype#index"
 end
