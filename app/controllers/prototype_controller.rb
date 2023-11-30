@@ -4,6 +4,7 @@ class PrototypeController < ApplicationController
   end
 
   def show
-    @session = headers['Cookie']
+    @session = headers
+    @bus_travel = BusTravelService.new.perform
   end
 end
