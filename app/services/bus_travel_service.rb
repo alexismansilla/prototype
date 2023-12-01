@@ -1,12 +1,18 @@
 class BusTravelService
+  attr_reader :params
+
+  def initialize(params:)
+    @params = params
+  end
+
   def perform
     url = 'http://local.recorrido.cl:3000/api/v2/es/bus_travels.json'
 
     data = {
       bus_travel: {
-        departure_city_id: 9333,
-        destination_city_id: 9343,
-        departure_date: '01-12-2023'
+        departure_city_id: params[:departure_city_id],
+        destination_city_id: params[:destination_city_id],
+        departure_date: params[:departure_date]
       }
     }
     response = request(url, data)
