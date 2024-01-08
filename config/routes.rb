@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
 
   get :show, to: 'prototype#show'
+  get :redirect_to_rr, to: 'prototype#redirect_to_rr'
 
   root to: "prototype#index"
 end
