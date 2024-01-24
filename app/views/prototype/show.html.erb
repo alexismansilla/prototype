@@ -1,13 +1,21 @@
-<%= params %>
-<br>
-<br>
-<%= @session %>
-<br>
-<br>
-<%= @bus_travel %>
-<br>
-<br>
-<%= @search_result %>
 <br>
 <br>
 <a href="/redirect_to_rr?client_token=<%= params['client_token'] %>">Redireccionando a la confirmaci&oacute;n del pago</a>
+<br>
+<br>
+<label>Params:</label><br>
+<%= params %>
+<br>
+<br>
+<label>Session:</label><br>
+<%= @session %>
+<br>
+<br>
+<label>Bus Travel:</label><br>
+<%= @bus_travel %>
+<br>
+<br>
+<label>Search result:</label><br>
+<%= @search_result %>
+<br>
+<br>
