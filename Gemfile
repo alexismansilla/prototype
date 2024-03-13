@@ -26,6 +26,7 @@ gem "jbuilder"
 gem "faraday"
 
 gem 'rack-cors'
+gem 'repost'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 

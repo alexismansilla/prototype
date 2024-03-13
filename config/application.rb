@@ -16,7 +16,6 @@ require "action_cable/engine"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
-require_relative '../app/middleware/catch_client_token'
 Bundler.require(*Rails.groups)
 
 module Prototype
@@ -47,6 +46,6 @@ module Prototype
     # config.action_controller.forgery_protection_origin_check = false
 
     config.generators.system_tests = nil
-    config.middleware.insert_before 0, CatchClientToken
+    # config.middleware.insert_before 0, CatchClientToken
   end
 end

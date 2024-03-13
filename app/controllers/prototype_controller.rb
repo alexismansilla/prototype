@@ -13,7 +13,6 @@ class PrototypeController < ApplicationController
   end
 
   def redirect_to_rr
-    redirect_to "http://local.recorrido.cl:3000/es", allow_other_host: true,
-                headers: { 'Client-Token' =>  params['client_token'] }
+    redirect_post "http://local.recorrido.cl:3000/es/confirm-booking", params: { 'client_token' =>  params[:client_token] }
   end
 end
