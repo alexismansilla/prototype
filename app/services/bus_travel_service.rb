@@ -6,7 +6,7 @@ class BusTravelService
   end
 
   def perform
-    url = 'http://local.recorrido.cl:3000/api/v2/es/bus_travels.json'
+    url = "#{ENV.fetch("BASE_URL_RR")}/api/busbud/es/bus_travels.json"
 
     data = {
       bus_travel: {

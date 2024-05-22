@@ -13,6 +13,6 @@ class PrototypeController < ApplicationController
   end
 
   def redirect_to_rr
-    redirect_post "http://local.recorrido.cl:3000/es/confirm-booking", params: { 'client_token' =>  params[:client_token] }
+    redirect_post "#{ENV.fetch("BASE_URL_RR")}/es/confirm-booking", params: { 'client_token' =>  params[:client_token] }
   end
 end

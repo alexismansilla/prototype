@@ -1,5 +1,5 @@
 class SearchResultService
-  BUS_OPERATION_ID = 40
+  BUS_OPERATION_ID = ENV.fetch("BUS_OPERATION_ID", 40)
 
   attr_reader :bus_travel
 
@@ -8,11 +8,11 @@ class SearchResultService
   end
 
   def perform
-    url = "http://local.recorrido.cl:3000/api/v2/es/bus_travels/#{bus_travel_id}/directions/outbound/bus_operators/#{BUS_OPERATION_ID}/search_results.json"
+    url = "#{ENV.fetch("BASE_URL_RR")}/api/busbud/es/bus_travels/#{bus_travel_id}/directions/outbound/bus_operators/#{BUS_OPERATION_ID}/search_results.json"
 
     response = request(url)
 
-    return response.body
+    response.body
   end
 
   private
