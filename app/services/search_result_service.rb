@@ -4,7 +4,7 @@ class SearchResultService
   attr_reader :bus_travel
 
   def initialize(bus_travel:)
-    @bus_travel = bus_travel
+    @bus_travel = JSON.parse(bus_travel)
   end
 
   def perform
